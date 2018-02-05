@@ -1,11 +1,10 @@
-/**
- * Microsoft: DEV277x - Object Oriented Programming in Java Edx Course
- * Module 1 Project
+/*
+ Microsoft: DEV277x - Object Oriented Programming in Java Edx Course Module 1 Project
  ***************
- * BATTLE SHIP
+ * BATTLE SHIP *
  ***************
- * Author: Emma Byrne
- **/
+Author: Emma Byrne
+*/
 import java.util.Scanner;
 
 public class BattleShip {
