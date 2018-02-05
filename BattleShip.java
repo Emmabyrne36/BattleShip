@@ -22,11 +22,13 @@ public class BattleShip {
         playGame(); // Play the game
     }
 
+    // Method to create the world map
     public static char[][] createWorld(){
         world = new char[10][10]; // Create a 10 by 10 grid
         return world;
     }
 
+    // Method to print the map
     public static void printWorld(){
         System.out.println("  0123456789  ");
         for (int i = 0; i < world.length; i++){
@@ -46,6 +48,7 @@ public class BattleShip {
         System.out.println("  0123456789  ");
     }
 
+    // Method to deploy the player's ships
     public static char[][] deployPlayerShip(){
         Scanner input = new Scanner(System.in);
         int count = 0;
@@ -69,6 +72,7 @@ public class BattleShip {
         return world;
     }
 
+    // Method to check if the coordinates are valid and if valid, determines what is in that position on the map
     public static int checkPosition(int x, int y){
         // Return 1 if the coordinates are outside the map, 2 if a user ship is there, 3 if a computer ship is there
         // Return 0 if the position is not filled
@@ -84,6 +88,7 @@ public class BattleShip {
         return 0;
     }
 
+    // Method to deploy the computer's ships
     public static char[][] deployComputerShips(){
         // Generate random ints between 0 and 9
         int x, y;
@@ -102,6 +107,7 @@ public class BattleShip {
         return world;
     }
 
+    // Method to enable a user to take a turn and try sink a ship
     public static int[] playerTurn(int[] ships){
         System.out.println("\n--------------------------\nYOUR TURN");
         // Get user to guess x and y coordinates
@@ -145,6 +151,7 @@ public class BattleShip {
         return ships;
     }
 
+    // Method to enable the computer to try and sink a ship
     public static int[] computerTurn(int[] ships){
         // the ships array stores how many user and computer ships are left
         // ships[0] = user ships, ships[1] = computer ships
@@ -178,6 +185,7 @@ public class BattleShip {
         return ships;
     }
 
+    // Method to play the game
     public static void playGame(){
         // calls above methods to play the game
         int[] ships = new int[] {5,5}; // populate ships array with 5 user ships and 5 computer ships
