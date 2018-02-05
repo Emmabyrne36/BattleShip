@@ -188,7 +188,7 @@ public class BattleShip {
     // Method to play the game
     public static void playGame(){
         // calls above methods to play the game
-        int[] ships = new int[] {5,5}; // populate ships array with 5 user ships and 5 computer ships
+        int[] ships = {5,5}; // populate ships array with 5 user ships and 5 computer ships
         int playerShips = ships[0];
         int computerShips = ships[1];
         while (playerShips > 0 && computerShips > 0){
